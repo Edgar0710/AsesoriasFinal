@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="esp-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Asesorias ">
+    <meta name="keywords" content="Educatcion, asesoria">
+    <meta name="theme-color" content="#ffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PWA Musica :Porta">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="/Content/Images/icons/apple/icons8-apple-music-512.png" rel="apple-touch-icon" size="512x512">
+    <link href="/Content/Images/icons/apple/ss/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/Content/Images/icons/apple/ss/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+   
+    <title>Formulario</title>
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/css/App/style.css"/>
+    <script src="/Scripts/Vendors/dexie.js"></script>
+
+</head>
+<body>
+    <nav class="navbar  navbar-expand-md bg-white border-bottom ">
+        <div class="container">
+            <a class="navbar-brand " href="#">Asesorias</a>
+        </div>
+    </nav>    
+    <div class="flex-grow-1" style="min-height:70vh;">
+        <form id="form_asesoria">
+        <div class="container section-form cl-gray mb-4 mt-md-4 border card-round" style="border-radius: 10px;">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-9">
+                   
+                        <h3 class="mb-4 mt-2 mt-md-4 fw-700">Detalle Asesoria</h3>
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 form-row">
+                          
+                            <div class="col form-group">
+                                <label for="txt_name">Nombre</label>
+                                <input type="text" name="txt_name" class="form-control">
+                            </div>
+                            <div class="col form-group">
+                                <label for="txt_apaterno">Apellido Paterno</label>
+                                <input type="text" name="txt_apaterno" class="form-control">
+                            </div>
+                            <div class="col form-group">
+                                <label for="txt_amaterno">Apellido Materno</label>
+                                <input type="text" name="txt_amaterno" class="form-control">
+                            </div>
+                            <div class="col form-group select">
+                                <label for="ddl_carrera">Selecciona tu Carrera</label>
+                                <select class="form-control" id="ddl_carrera" name="ddl_carrera" >
+                                    <option selected="selected" >Carrera</option>
+                                    <option value="TSU en desarrollo de software multiplataforma">TSU en desarrollo de software multiplataforma</option>
+                                    <option value="TSU en entornos virtuales y negocios digitales">TSU en entornos virtuales y negocios digitales</option>
+                                    <option value="Ing en gestión y desarrollo de software">Ing gestión y desarrollo de software</option>
+                                    <option value="Ing en entornos virtuales y negocios digitales">Ing gestión y negocios digitales</option>
+                                </select>
+                            </div>
+                            <div class="col form-group select">
+                                <label for="">Selecciona tu cuatrimestre</label>
+                                <select class="form-control" id="ddl_cuatri" name="ddl_cuatri" >
+                                    <option selected="selected" disabled>cuatrimestre</option>
+                                    <option value="primero">primero</option>
+                                    <option value="segundo">segundo</option>
+                                    <option value="tercer">tercer</option>
+                                    <option value="cuarto">cuarto</option>
+                                    <option value="quinto">quinto</option>
+                                    <option value="sexto">sexto</option>
+                                    <option value="septimo">septimo</option>
+                                    <option value="octavo">octavo</option>
+                                    <option value="noveno">noveno</option>
+                                    <option value="decimo">decimo</option>
+                                </select>
+                            </div>
+                            <div class="col form-group select">
+                                <label for="">Selecciona tu grupo</label>
+                                <select id="group" name="group" class="form-control">
+                                    <option selected="selected" disabled>grupo</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                </select>
+                            </div>
+                            <div class="col form-group select">
+                                <label for="">Selecciona tu docente</label>
+                                <select class="form-control" id="ddl_docente" name="ddl_docente" >
+                                    <option selected="selected" disabled>docente</option>
+                                    <option value="Ivan Quintero">Ivan Quintero</option>
+                                    <option value="Adan Mendoza">Adan Mendoza</option>
+                                    <option value="Marco Ramirez">Marco Ramirez</option>
+                                    <option value="Mayra Ibarra Santos">Mayra Ibarra Santos</option>
+                                </select>
+                            </div>
+                            <div class="col form-group select">
+                                <label for="">Selecciona tu materia</label>
+                                <select id="materia" name="materia" class="form-control">
+                                    <option selected="selected" disabled>materia</option>
+                                    <option value="Fundamentos de programación">fundamentos de programacíon</option>
+                                    <option value="Redes">Redes</option>
+                                    <option value="Desarrllo de aplicaciones moviles">Desarrllo de aplicaciones moviles</option>
+                                </select>
+                            </div>
+                           <div class="col col-sm-12 col-md-6 form-group">
+                               <label for="">Seleciona la fecha</label>
+                               <input type="date" id="date" name="date" class="form-control">
+                           </div>
+                           <div class="col col-sm-12 col-md-6 form-group">
+                            <label for="">Seleciona la hora</label>
+                            <input type="time" id="time" name="time" class="form-control">
+                              </div>
+                            <div class="col-12 col-sm-12 col-md-12 form-group">
+                                <label for="">Descripción</label>
+                                <textarea id="au_descripcion" name="au_descripcion" class="form-control" rows="5" placeholder="Ingresa información referente al tema de la asesoria u observaciones"></textarea>
+                            </div>
+                        </div>
+    
+              
+    
+    
+                </div>
+    
+                <div class="col-12 col-lg-10 col-xl-9 d-flex justify-content-end my-3">
+             
+                    <button type="submit" class="btn btn-outline-primary " id="btn-sendForm">
+                       Enviar
+                    </button>
+                   
+                </div>
+                        
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer d-flex justify-content-center bg-white p-4 border-top mt-2">
+        <div class="ft-info my-auto">
+            <div class="ft-info-item xs-text ">Copyright © 2021 Edgar Carrera Carrasco</div>
+         </div>
+     </footer>
+<!-- The actual snackbar -->
+<div id="snackbar" class="d-flex justify-content-between">
+    <span class="my-1">Hay una nueva version disponible</span>
+    <button class=" btn btn-outline-primary rounded my-1" id="btn-update" href="">Actualizar</button>
+</div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/Scripts/Vendors/sweetalert2.all.min.js"></script>
+<script src="/Scripts/Vendors/Mensaje-1.0.js"></script>
+<script src="/Scripts/App/sync/sync.js"></script>
+<script src="/Scripts/App/main/main.js"></script>
+<script src="/Scripts/App/formulario/form.js"></script>
+</body>
+</html>
